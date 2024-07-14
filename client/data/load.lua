@@ -58,7 +58,7 @@ AddEventHandler('mi:hsg:load_apartment:shell', function()
 
 end)
 
-TriggerEvent('mi:hsg:load_apartment:shell')
+--TriggerEvent('mi:hsg:load_apartment:shell')
 
 RegisterNetEvent('mi:hsg:load_apartment:door')
 AddEventHandler('mi:hsg:load_apartment:door', function()
@@ -81,4 +81,4 @@ AddEventHandler('mi:hsg:load_apartment:door', function()
 })
 end)
 
-TriggerEvent('mi:hsg:load_apartment:door')
+--TriggerEvent('mi:hsg:load_apartment:door')

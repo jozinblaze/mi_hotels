@@ -47,3 +47,66 @@ DoNotif= function(data, type)
         iconAnimation = type.icon_anim
     })
 end
+
+local disabled = {car = false, turnin = true}
+LoadRentalMenu = function(data)
+    lib.registerContext({
+        id = 'mihotel_rentals',
+        title = 'Hotel Vehicle Rentals',
+        options = {
+          {
+            title = 'Obey Tailgater S',
+            description = 'Rental Cost: $110',
+            icon = 'car-side',
+            disabled = disabled.car,
+            onSelect = function()
+                local model = 'tailgater2'
+                local garage = data.garage
+                local vehicle =
+                lib.callback.await('mihotels:create:vehicle', false, source, model, garage)
+                disabled.car = true disabled.turnin = false
+            end,
+          },
+          {
+            title = 'Lampadati Cinquemila',
+            description = 'Rental Cost: $130',
+            icon = 'car-side',
+            disabled = disabled.car,
+            onSelect = function()
+                print('ID: '..data.id,
+                'Name: '..data.label,
+                'Address: '..data.dest)
+            end,
+          },
+          {
+            title = 'Obey I-Wagen',
+            description = 'Rental Cost: $180',
+            icon = 'van-shuttle',
+            disabled = disabled.car,
+            onSelect = function()
+                disabled.car = true disabled.turnin = false
+            end,
+          },
+          {
+            title = 'Lampadati Novak',
+            description = 'Rental Cost: $220',
+            icon = 'van-shuttle',
+            disabled = disabled.car,
+            onSelect = function()
+                disabled.car = true disabled.turnin = false
+            end,
+          },
+          {
+            title = 'Return Rental',
+            description = 'Rental must be nearby',
+            icon = 'warehouse',
+            disabled = disabled.turnin,
+            onSelect = function()
+                disabled.car = false disabled.turnin = true
+            end,
+          },
+        }
+    })
+    
+    lib.showContext('mihotel_rentals')
+end

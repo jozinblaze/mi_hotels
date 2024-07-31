@@ -32,8 +32,8 @@ War = {
     color_icon = '#ffffff', icon_disp = 'exclamation', icon_anim = 'beat'
 }
 
-RegisterNetEvent('notif')
-AddEventHandler('notif', function(data, type)
+
+DoNotif= function(data, type)
     lib.notify({
         id = data.id, title = data.title, description = data.desc,
         duration = NotInfo.duration, showDuration = NotInfo.showduration,
@@ -46,4 +46,4 @@ AddEventHandler('notif', function(data, type)
         icon = type.icon_disp, iconColor = type.color_icon,
         iconAnimation = type.icon_anim
     })
-end)
+end

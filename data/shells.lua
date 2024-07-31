@@ -1,40 +1,35 @@
 Data.Shell = {
 
     Hotel = {
-        ['hotel_high'] = {
-            model = 'modernhotel_shell', label = 'Modern Hotel', offset = {
-                door = vec4(4.970, 4.359, -1.807, 182.221), enter = vec4(4.854, 3.896, -1.808, 181.138),
-                ward = vec4(3.120, -4.238, -1.808, 0.837), bed = vec4(-4.663, -0.019, -2.088, 358.190),
-                stash = vec4(-4.282, 4.261, -1.857, 359.977),
-            }
-        },
-
-        ['hotel_low'] = {
-            model = 'standardmotel_shell', label = 'Standard Hotel', offset = {
-                door = vec4(-0.473, -2.458, -1.546, 272.120), enter = vec4(-0.258, -2.458, -1.546, 269.503),
-                ward = vec4(1.280, 3.221, -1.546, 181.873), bed = vec4(-0.099, -0.109, -1.845, 182.931),
-                stash = vec4(1.513, -3.159, -0.773, 181.962),
-            }
-        },
-    },
-
-    Apartment = {
-        ['hotel_high'] = {
-            model = '', label = '', offset = {
-                door = vec4(4.970, 4.359, -1.807, 182.221), enter = vec4(4.854, 3.896, -1.808, 181.138),
-                ward = vec4(3.120, -4.238, -1.808, 0.837), bed = vec4(-4.663, -0.019, -2.088, 358.190),
-                stash = vec4(-4.282, 4.261, -1.857, 359.977),
-            }
-        },
-    },
-
-    House = {
-        ['hotel_high'] = {
-            model = '', label = '', offset = {
-                door = vec4(4.970, 4.359, -1.807, 182.221), enter = vec4(4.854, 3.896, -1.808, 181.138),
-                ward = vec4(3.120, -4.238, -1.808, 0.837), bed = vec4(-4.663, -0.019, -2.088, 358.190),
-                stash = vec4(-4.282, 4.261, -1.857, 359.977),
-            }
-        },
+        model = 'k4mb1_motel2_shell', label = 'Modern Hotel', offsets = {
+            door = {
+                coords = vec3(-0.243531, 0.032715, 0.004967),
+                size = vec3(0.1, 1.35, 2.3), rotation = 180.0
+            },
+            stash = {
+                coords = vec3(1.919037, 2.839478, 0.004356),
+	            size = vec3(0.1, 0.95, 0.7), rotation = 180.0,
+            },
+            wardrobe = {
+                coords = vec3(3.892853, -2.185669, 0.004982),
+                size = vec3(0.1, 1.35, 2.3), rotation = 180.0
+            },
+            fridge = {
+                coords = vec3(2.212646, -2.130859, 0.005112),
+	            size = vec3(0.1, 0.75, 1.8), rotation = 270.0,
+            },
+            stove = {
+                coords = vec3(0.538605, -2.208984, 0.005112),
+                size = vec3(0.5, 0.75, 0.1), rotation = 270.0,
+            },
+            sink = {
+                coords = vec3(3.460449, 3.085449, 0.004982),
+                size = vec3(0.5, 0.75, 0.1), rotation = 270.0,
+            },
+            bed = {
+                coords = vec3(5.553497, -1.369751, 0.005112),
+                size = vec3(2.35, 1.8, 0.2), rotation = 270.0,
+            },
+        }
     }
 }
